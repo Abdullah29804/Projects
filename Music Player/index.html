@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="song-details">
+            <h2 id="song-title">Song Title</h2>
+            <h3 id="song-artist">Artist Name</h3>
+        </div>
+
+        <div class="img-container">
+            <img src="https://via.placeholder.com/150" alt="Album Art" id="album-art">
+        </div>
+
+        <div class="controls">
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="progress-bar-area" id="progress-bar-area"></div>
+            </div>
+            <div class="time-info">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="player-buttons">
+                <button id="prev" class="fas fa-backward"></button>
+                <button id="play" class="fas fa-play"></button>
+                <button id="next" class="fas fa-forward"></button>
+            </div>
+
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="1" value="0.7" step="0.01">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio" src="music/song1.mp3"></audio> <script src="script.js"></script>
+</body>
+</html>
