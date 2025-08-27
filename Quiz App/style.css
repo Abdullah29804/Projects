@@ -1,0 +1,120 @@
+/* General styling for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container for the entire quiz app */
+.quiz-container {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Styling for the question text */
+#question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Styling for the quiz options/buttons */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option-btn {
+    background-color: #ecf0f1;
+    border: 2px solid transparent;
+    color: #2c3e50;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.option-btn:hover {
+    background-color: #bdc3c7;
+}
+
+/* Correct and incorrect answer feedback */
+.option-btn.correct {
+    background-color: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+}
+
+.option-btn.incorrect {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+/* Styling for the next button */
+#next-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; /* Initially hidden */
+    margin-top: 1rem;
+}
+
+#next-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for the title and score on the result screen */
+.results h2 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.results p {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+}
+
+.results #restart-btn {
+    background-color: #9b59b6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.results #restart-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Utility classes to show/hide sections */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="quiz-container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h1>Quiz App</h1>
+            <p>Test your knowledge with these questions!</p>
+            <button id="start-btn" class="option-btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="hidden">
+            <h2 id="question-text"></h2>
+            <div id="options-container" class="options"></div>
+            <button id="next-btn" class="option-btn">Next</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hidden">
+            <div class="results">
+                <h2>Quiz Complete!</h2>
+                <p>You scored <span id="score-display">0</span> out of <span id="total-questions-display">0</span>.</p>
+                <button id="restart-btn" class="option-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Link to the external JavaScript file for functionality -->
+    <script src="script.js"></script>
+
+</body>
+</html>
