@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <!-- Tailwind CSS CDN for a clean and responsive UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <!-- Main Weather App Container -->
+    <div class="weather-card w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl p-6 md:p-8 m-4 text-white">
+        <h1 class="H1">Weather App</h1>
+        <br>
+    <!-- Search Section -->
+        <div class="flex flex-col sm:flex-row items-center justify-center mb-6">
+            <input type="text" id="city-input" placeholder="Enter city name"
+                   class="flex-grow w-full sm:w-auto p-3 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 transition duration-300 shadow-md mb-4 sm:mb-0 sm:mr-3">
+            <button id="search-btn"
+                    class="w-full sm:w-auto p-3 rounded-xl bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-md font-semibold">
+                Search
+            </button>
+        </div>
+
+        <!-- Weather Display Section -->
+        <div id="weather-info" class="text-center transition-opacity duration-500 opacity-0 hidden">
+            <div class="mb-4">
+                <h2 id="city-name" class="text-3xl md:text-4xl font-bold mb-1"></h2>
+                <p id="weather-condition" class="text-lg md:text-xl font-light capitalize"></p>
+            </div>
+            <img id="weather-icon" src="" alt="Weather Icon" class="w-24 h-24 mx-auto mb-4">
+            <div class="text-5xl md:text-6xl font-extrabold mb-4 flex items-center justify-center">
+                <span id="temperature"></span>°C
+            </div>
+            <div class="flex justify-around items-center text-sm md:text-base font-medium">
+                <div class="text-center">
+                    <p class="text-white text-opacity-80">Humidity</p>
+                    <p id="humidity-value" class="text-xl md:text-2xl font-bold"></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-white text-opacity-80">Wind Speed</p>
+                    <p id="wind-speed-value" class="text-xl md:text-2xl font-bold"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading/Error Section -->
+        <div id="status-message" class="flex flex-col items-center justify-center min-h-[200px] text-center">
+            <div class="loading-spinner hidden"></div>
+            <p id="message-text" class="mt-4 text-lg font-medium"></p>
+        </div>
+        
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
